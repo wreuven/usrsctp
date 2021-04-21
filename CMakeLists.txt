@@ -29,6 +29,8 @@
 # SUCH DAMAGE.
 #
 
+set(CMAKE_COMPILER_IS_CYGWIN 1)
+
 project(usrsctplib C)
 cmake_minimum_required(VERSION 3.0)
 
