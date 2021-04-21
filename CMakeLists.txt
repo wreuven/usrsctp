@@ -47,11 +47,6 @@ if (NOT CMAKE_BUILD_TYPE)
 	set(CMAKE_BUILD_TYPE "DEBUG")
 endif ()
 
-if (WIN32)
-	message(STATUS "link library: ws2_32")
-	target_link_libraries(usrsctp ws2_32 iphlpapi)
-endif ()
-
 include(CheckStructHasMember)
 include(CheckIncludeFile)
 include(CheckIncludeFiles)
