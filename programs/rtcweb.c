@@ -35,7 +35,7 @@
  * gcc -Wall -std=c99 -pedantic -o rtcweb rtcweb.c -lusrsctp
  */
 
-#undef WIN32
+#undef _WIN32
 
 #include <sys/types.h>
 #ifdef _WIN32
