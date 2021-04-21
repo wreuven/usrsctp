@@ -35,6 +35,8 @@
  * gcc -Wall -std=c99 -pedantic -o rtcweb rtcweb.c -lusrsctp
  */
 
+#undef WIN32
+
 #include <sys/types.h>
 #ifdef _WIN32
 #define _CRT_SECURE_NO_WARNINGS
