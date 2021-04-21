@@ -50,6 +50,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <sys/select.h>
 #else /* !defined(_WIN32) */
 #include <io.h>
 #endif
