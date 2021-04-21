@@ -259,7 +259,7 @@ handle_peer_address_change_event(struct sctp_paddr_change *spc)
 	case AF_CONN:
 		sconn = (struct sockaddr_conn *)&spc->spc_aaddr;
 #ifdef _WIN32
-		if (_snprintf(addr_buf, INET6_ADDRSTRLEN, "%p", sconn->sconn_addr) < 0) {
+		if (snprintf(addr_buf, INET6_ADDRSTRLEN, "%p", sconn->sconn_addr) < 0) {
 #else
 		if (snprintf(addr_buf, INET6_ADDRSTRLEN, "%p", sconn->sconn_addr) < 0) {
 #endif
