@@ -28,6 +28,8 @@
  *
  */
 
+#define _WIN32
+
 #if defined(INET) || defined(INET6)
 #include <sys/types.h>
 #if !defined(_WIN32)
