@@ -72,7 +72,7 @@ receive_cb(struct socket *sock, union sctp_sockstore addr, void *data,
 		if (flags & MSG_NOTIFICATION) {
 			handle_notification((union sctp_notification *)data, datalen);
 		} else {
-#ifdef _WIN32
+#ifdef ___WIN32
 			_write(_fileno(stdout), data, (unsigned int)datalen);
 #else
 			if (write(fileno(stdout), data, datalen) < 0) {
