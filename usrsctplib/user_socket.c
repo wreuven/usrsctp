@@ -3206,7 +3206,7 @@ usrsctp_dumppacket(const void *buf, size_t len, int outbound)
 	pos = 0;
 #ifdef _WIN32
 	ftime(&tb);
-	localtime_s(&t, &tb.time);
+	localtime_r(&t, &tb.time);
 #if defined(__MINGW32__)
 	if (snprintf(dump_buf, PREAMBLE_LENGTH + 1, PREAMBLE_FORMAT,
 	             outbound ? 'O' : 'I',
