@@ -86,7 +86,7 @@ receive_cb(struct socket *sock, union sctp_sockstore addr, void *data,
 #endif
 			case AF_CONN:
 #ifdef _WIN32
-				if (_snprintf(namebuf, INET6_ADDRSTRLEN, "%p", addr.sconn.sconn_addr) < 0) {
+				if (snprintf(namebuf, INET6_ADDRSTRLEN, "%p", addr.sconn.sconn_addr) < 0) {
 #else
 				if (snprintf(namebuf, INET6_ADDRSTRLEN, "%p", addr.sconn.sconn_addr) < 0) {
 #endif
