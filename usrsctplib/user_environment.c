@@ -30,8 +30,6 @@
 
 /* __Userspace__ */
 
-#undef _WIN32
-
 #if defined(_WIN32)
 #if !defined(_CRT_RAND_S) && !defined(FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION)
 #define _CRT_RAND_S
@@ -143,7 +141,7 @@ finish_random(void)
 {
 	return;
 }
-#elif defined(_WIN32)
+#elif defined(_WIN32___)
 #include <stdlib.h>
 
 void
