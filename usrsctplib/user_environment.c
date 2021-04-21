@@ -141,7 +141,7 @@ finish_random(void)
 {
 	return;
 }
-#elif defined(_WIN32___)
+#elif defined(_WIN32)
 #include <stdlib.h>
 
 void
