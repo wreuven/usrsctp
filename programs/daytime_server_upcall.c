@@ -69,7 +69,7 @@ handle_accept(struct socket *sock, void *data, int flags)
 	}
 	time(&now);
 #ifdef _WIN32
-		if (_snprintf(buffer, sizeof(buffer), "%s", ctime(&now)) < 0) {
+		if (snprintf(buffer, sizeof(buffer), "%s", ctime(&now)) < 0) {
 #else
 		if (snprintf(buffer, sizeof(buffer), "%s", ctime(&now)) < 0) {
 #endif
