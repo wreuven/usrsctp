@@ -29,6 +29,8 @@
 # SUCH DAMAGE.
 #
 
+set(CMAKE_COMPILER_IS_CYGWIN 0)
+
 
 #################################################
 # INCLUDE MODULES
