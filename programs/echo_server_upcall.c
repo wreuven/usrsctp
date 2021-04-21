@@ -85,7 +85,7 @@ handle_upcall(struct socket *sock, void *data, int flgs)
 			if (flags & MSG_NOTIFICATION) {
 				printf("Notification of length %d received.\n", (int)n);
 			} else {
-#ifdef _WIN32
+#ifdef _WIN32___
 				_write(_fileno(stdout), buf, (unsigned int)n);
 #else
 				if (write(fileno(stdout), buf, n) < 0) {
