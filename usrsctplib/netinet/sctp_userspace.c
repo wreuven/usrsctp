@@ -27,6 +27,7 @@
  */
 
 #define _WIN32
+#define __MINGW32__
 
 
 #ifdef _WIN32
