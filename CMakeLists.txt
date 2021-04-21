@@ -62,10 +62,13 @@ if (sctp_inet)
 	add_definitions(-DINET)
 endif ()
 
-option(sctp_inet6 "Support IPv6" 1)
-if (sctp_inet6)
-	add_definitions(-DINET6)
-endif ()
+add_definitions(-D_WIN32)
+add_definitions(-D__CYGWIN__)
+
+#option(sctp_inet6 "Support IPv6" 1)
+#if (sctp_inet6)
+#	add_definitions(-DINET6)
+#endif ()
 
 option(sctp_werror "Treat warning as error" 1)
 
