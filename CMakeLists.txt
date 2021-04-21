@@ -35,6 +35,9 @@ add_definitions(-D_WIN32)
 add_definitions(-D__CYGWIN__)
 add_definitions(-D__MINGW32__)
 
+# -lws2_32 is missing
+
+
 project(usrsctplib C)
 cmake_minimum_required(VERSION 3.0)
 
