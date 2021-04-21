@@ -269,7 +269,7 @@ handle_peer_address_change_event(struct sctp_paddr_change *spc)
 		break;
 	default:
 #ifdef _WIN32
-		if (_snprintf(addr_buf, INET6_ADDRSTRLEN, "Unknown family %d", spc->spc_aaddr.ss_family) < 0) {
+		if (snprintf(addr_buf, INET6_ADDRSTRLEN, "Unknown family %d", spc->spc_aaddr.ss_family) < 0) {
 #else
 		if (snprintf(addr_buf, INET6_ADDRSTRLEN, "Unknown family %d", spc->spc_aaddr.ss_family) < 0) {
 #endif
