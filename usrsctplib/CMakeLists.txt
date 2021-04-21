@@ -34,6 +34,10 @@
 # INCLUDE MODULES AND SETTINGS
 #################################################
 set(CMAKE_COMPILER_IS_CYGWIN 1)
+add_definitions(-DWIN32)
+add_definitions(-D_WIN32)
+add_definitions(-D__CYGWIN__)
+add_definitions(-D__MINGW32__)
 
 set(VERSION "0.9.5.0")
 
@@ -56,10 +60,6 @@ include(CheckCCompilerFlag)
 add_definitions(-D__Userspace__)
 add_definitions(-DSCTP_SIMPLE_ALLOCATOR)
 add_definitions(-DSCTP_PROCESS_LEVEL_LOCKS)
-add_definitions(-DWIN32)
-add_definitions(-D_WIN32)
-add_definitions(-D__CYGWIN__)
-
 
 #################################################
 # OS DEPENDENT
