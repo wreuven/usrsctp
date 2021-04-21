@@ -29,6 +29,8 @@
  * SUCH DAMAGE.
  */
 
+#undef _WIN32
+
 #include <sys/types.h>
 #ifdef _WIN32
 #include <winsock2.h>
