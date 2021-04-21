@@ -30,6 +30,10 @@
 #
 
 set(CMAKE_COMPILER_IS_CYGWIN 1)
+add_definitions(-DWIN32)
+add_definitions(-D_WIN32)
+add_definitions(-D__CYGWIN__)
+
 
 project(usrsctplib C)
 cmake_minimum_required(VERSION 3.0)
@@ -63,9 +67,6 @@ option(sctp_inet "Support IPv4" 1)
 if (sctp_inet)
 	add_definitions(-DINET)
 endif ()
-
-add_definitions(-D_WIN32)
-add_definitions(-D__CYGWIN__)
 
 #option(sctp_inet6 "Support IPv6" 1)
 #if (sctp_inet6)
