@@ -32,6 +32,8 @@
  * Usage: http_client_upcall remote_addr remote_port [local_port] [local_encaps_port] [remote_encaps_port] [uri]
  */
 
+#undef _WIN32
+
 #ifdef _WIN32
 #define _CRT_SECURE_NO_WARNINGS
 #endif
