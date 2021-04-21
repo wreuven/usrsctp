@@ -30,6 +30,8 @@
 
 /* __Userspace__ */
 
+#define _WIN32
+
 #if defined(_WIN32)
 #if !defined(_CRT_RAND_S) && !defined(FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION)
 #define _CRT_RAND_S
