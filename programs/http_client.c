@@ -263,7 +263,7 @@ main(int argc, char *argv[])
 			request[0] = '\0';
 		}
 	} else {
-#ifdef _WIN32
+#ifdef _WIN32___
 		if (_snprintf(request, sizeof(request), "%s %s %s", request_prefix, "/", request_postfix) < 0) {
 #else
 		if (snprintf(request, sizeof(request), "%s %s %s", request_prefix, "/", request_postfix) < 0) {
