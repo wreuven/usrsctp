@@ -84,7 +84,7 @@ receive_cb(struct socket *sock, union sctp_sockstore addr, void *data,
 		if (flags & MSG_NOTIFICATION) {
 			handle_notification((union sctp_notification *)data, datalen);
 		} else {
-#ifdef _WIN32
+#ifdef _WIN32___
 		_write(_fileno(stdout), data, (unsigned int)datalen);
 #else
 		if (write(fileno(stdout), data, datalen) < 0) {
@@ -255,7 +255,7 @@ main(int argc, char *argv[])
 	}
 
 	if (argc > 6) {
-#ifdef _WIN32
+#ifdef _WIN32___
 		if (_snprintf(request, sizeof(request), "%s %s %s", request_prefix, argv[6], request_postfix) < 0) {
 #else
 		if (snprintf(request, sizeof(request), "%s %s %s", request_prefix, argv[6], request_postfix) < 0) {
