@@ -114,6 +114,8 @@ foreach (source_file ${check_programs})
 		programs_helper.c
 	)
 
+	target_link_libraries(ws2_32 iphlpapi)
+
 	target_link_libraries(
 		${source_file_we}
 		"usrsctp"
