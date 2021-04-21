@@ -35,7 +35,8 @@ add_definitions(-D_WIN32)
 add_definitions(-D__CYGWIN__)
 add_definitions(-D__MINGW32__)
 
-# -lws2_32 is missing
+# -lws2_32 iphlpapi, missing: try to add it here
+# target_link_libraries(usrsctp ws2_32 iphlpapi)
 
 
 project(usrsctplib C)
