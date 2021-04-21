@@ -33,6 +33,7 @@
 #################################################
 # INCLUDE MODULES AND SETTINGS
 #################################################
+set(CMAKE_COMPILER_IS_CYGWIN 1)
 
 set(VERSION "0.9.5.0")
 
